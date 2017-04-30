@@ -1,0 +1,31 @@
+{
+  "presets": [
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "plugins": [
+    "babel-plugin-transform-object-rest-spread",
+    ["babel-plugin-react-intl", {
+      "messagesDir": "./tmp/messages/",
+      "enforceDescriptions": true
+    }],
+    "lodash",
+    "transform-runtime",
+    "transform-react-jsx-source",
+    "transform-decorators-legacy",
+    "transform-flow-strip-types"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "babel-plugin-transform-react-constant-elements",
+        ["babel-plugin-react-intl", {
+          "messagesDir": "./tmp/messages/",
+          "enforceDescriptions": true
+        }],
+        "transform-flow-strip-types"
+      ]
+    }
+  }
+}

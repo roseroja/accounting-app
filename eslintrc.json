@@ -1,0 +1,28 @@
+{
+  "extends": [
+    "account",
+    "./config/eslint/.eslintrc-react",
+    "plugin:flowtype/recommended"],
+  "parser": "babel-eslint",
+  "env": {
+      "es6": true,
+      "browser": true,
+      "node": true
+  },
+  "plugins":[
+      "react",
+      "flowtype"
+  ],
+  "rules": {
+      "strict": 0,
+      "no-empty-label": 0
+  },
+  "parserOptions": {
+      "ecmaVersion": 7,
+      "sourceType": "module",
+      "ecmaFeatures": {
+          "jsx": true,
+          "experimentalObjectRestSpread": true
+      }
+  }
+}
