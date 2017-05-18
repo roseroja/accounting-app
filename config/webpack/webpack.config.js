@@ -4,8 +4,8 @@ var combineLoaders = require('webpack-combine-loaders');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var BUILD_DIR = path.resolve(__dirname, 'build');
-var APP_DIR = path.resolve(__dirname, 'app');
+var BUILD_DIR = path.resolve(__dirname, '../../build');
+var APP_DIR = path.resolve(__dirname, '../../app');
 
 module.exports = {
   entry: {
