@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, '../../build');
 var APP_DIR = path.resolve(__dirname, '../../src');
-
+console.log(APP_DIR);
 module.exports = {
   entry: {
     entry: APP_DIR + '/index.js'
@@ -17,16 +17,8 @@ module.exports = {
   },
   resolve: {
     modules: ["node_modules", "app", "app/*"],
-    extensions: [".js", ".css",".jsx", ".json"]
+    extensions: ["", ".js", ".jsx", ".css", ".json"]
   },
-  plugins: [
-    new ExtractTextPlugin('bundle.css'),
-    new webpack.HotModuleReplacementPlugin(),
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-      inject:false
-    })
-  ],
   module: {
     loaders: [
       {
@@ -69,6 +61,14 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new ExtractTextPlugin('bundle.css'),
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'index.html',
+      inject:false
+    })
+  ],
   stats: {
     colors: true
   },

@@ -3,7 +3,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Webpack = require('webpack');
 const DashboardPlugin = require('webpack-dashboard/plugin');
-const Config = require('../../config/webpack/webpack.config.js');
+const Config = require('../../config/webpack/webpack.config.dev.js');
 
 const server = new Hapi.Server({
   debug: {
