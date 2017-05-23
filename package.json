@@ -6,9 +6,9 @@
   "eslintConfig": {
     "extends": "accounting-app"
   },
-  "homepage": ".",
+  "homepage": "./public/index.html",
   "devDependencies": {
-   "@kadira/react-storybook-addon-info": "^3.4.0",
+    "@kadira/react-storybook-addon-info": "^3.4.0",
     "@kadira/storybook": "^2.21.0",
     "@salucro/eslint-config-salucro": "^1.0.18",
     "amplifier": "^1.0.1",
@@ -135,6 +135,7 @@
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject",
-    "dev": "webpack-dashboard -- node ./dashboard/tools/devServer"
+    "dev": "webpack-dashboard -- node ./dashboard/tools/devServer",
+    "abid": "node ./devServer"
   }
 }

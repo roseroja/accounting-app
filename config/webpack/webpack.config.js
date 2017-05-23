@@ -6,13 +6,14 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, '../../build');
 var APP_DIR = path.resolve(__dirname, '../../src');
-console.log(APP_DIR);
+
 module.exports = {
   entry: {
     entry: APP_DIR + '/index.js'
   },
   output: {
     path: BUILD_DIR,
+    publicPath: "/public/",
     filename: 'index.bundle.js'
   },
   resolve: {

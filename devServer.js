@@ -3,8 +3,7 @@ const Hapi = require('hapi');
 const Inert = require('inert');
 const Webpack = require('webpack');
 const DashboardPlugin = require('webpack-dashboard/plugin');
-const Config = require('../../config/webpack/webpack.config.dev.js');
-
+const Config = require('./config/webpack/webpack.config.dev.js');
 const server = new Hapi.Server({
   debug: {
     log: ['error']
@@ -82,5 +81,5 @@ server.start((err) => {
   if (err) {
     throw err;
   }
-  console.log('server started on---: ', compiler.outputPath);
+  console.log('server started on: ', compiler.outputPath);
 });
